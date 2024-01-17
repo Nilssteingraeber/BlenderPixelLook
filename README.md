@@ -14,7 +14,7 @@ The addon changes every material of the selected object:
 
 ## How to install
 
-Blender Version 4.0:
+Blender Version 4.0 - 2.83:
 
 1. Download the Python script corresponding with the Blender version you are working with.
 2. In Blender, go to Edit -> Preferences -> Add-ons
