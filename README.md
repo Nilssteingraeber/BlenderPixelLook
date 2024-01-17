@@ -1,4 +1,4 @@
-# BlenderPixelLook
+# Blender Pixel Look
 A simple Blender addon to make pixelart materials work without changing every material by hand. 
 Especially designed to work with exported maps from [DSPRE](https://github.com/AdAstra-LD/DS-Pokemon-Rom-Editor) and [AdAstra's PDSME](https://github.com/AdAstra-LD/Pokemon-DS-Map-Studio) / [Trifindo's PDSME](https://github.com/Trifindo/Pokemon-DS-Map-Studio).
 
