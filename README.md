@@ -8,7 +8,7 @@ Especially designed to work with exported maps from [DSPRE](https://github.com/A
 ## What it does
 
 The addon changes every material of the selected object:
-1. Setting interpolation mode to "nearest neighbor" / "closest".
+1. Setting interpolation mode to "nearest neighbor" / "closest"
 2. Setting correct alpha textures
 3. Setting blending mode to "alpha clip" / "clip" 
 
