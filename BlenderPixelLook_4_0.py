@@ -37,24 +37,26 @@ class PixelLookSetup(bpy.types.Operator):
             
             mat.blend_method = 'CLIP'
             mat.alpha_threshold = 0
-            mat.specular_intensity = 0
             
             for node in nodes:                
                 if node.type=="BSDF_PRINCIPLED":
                     shader = node
                     
-                    imageNode = 0
+                    if hasattr(node.inputs, 'IOR'):
+                        node.inputs["IOR"].default_value = 1
+                    
+                    imageNode = None
                     for n in links:
                         if n.from_node.type == "TEX_IMAGE":
                             imageNode = n.from_node
                     
-                    nodeInput = node.inputs["Alpha"]
-                    nodeOutput = imageNode.outputs[0]
-                    
-                    links.new(
-                        nodeOutput,
-                        nodeInput
-                    )
+                    if(imageNode != None):
+                        nodeInput = node.inputs["Alpha"]
+                        nodeOutput = imageNode.outputs[0]
+                        links.new(
+                            nodeOutput,
+                            nodeInput
+                        )
 
         for mat in unique_materials:
             nodes = mat.node_tree.nodes
